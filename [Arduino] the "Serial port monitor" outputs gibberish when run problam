@@ -1,0 +1,22 @@
+[Arduino] the "Serial port monitor" outputs gibberish when run problam
+[Arduino] 运行程序时，串口显示器的输出乱码
+
+Question:
+the "Serial port monitor" outputs gibberish when run problam
+运行程序时，串口显示器的输出乱码
+
+Reason:
+when problam with arduino uno, the total RAM is 32k. So is the problam is more than 30k, there has not enough room to run this problem.
+使用Arduino uno开发程序时，当程序大小超过30k时，系统就没有足够的空间运行程序了，毕竟uno一共32k内存
+
+Solution:
+choose mega2560  of uno
+换Mega2560
+
+advice：
+when the program is more than 25k, we'd better choose mega 2560
+当程序25k+的时候，最好换用mega2560
+
+2017-8-24
+
+
