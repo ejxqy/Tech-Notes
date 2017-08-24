@@ -1,0 +1,17 @@
+[MFC] CEdit add output string in the tail
+[MFC] CEdit 在末尾追加信息
+
+Question:
+CEdit add output string in the tail
+CEdit 在末尾追加信息
+
+Reason:
+
+Solution:
+int nowlen=m_edit.GetLength();
+m_edit.SetSel(nowlen,nowlen);
+m_edit.ReplaceSel("asdfgg");
+
+PS:  i forgot whether i use this code in my program...
+
+2017-8-24
