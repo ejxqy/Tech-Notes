@@ -1,0 +1,16 @@
+[Raspberry]Raspberry cannot establish ssh connection by wifi
+[Raspberry]树莓派 Raspberry 通过 wifi 无法进行ssh连接
+
+Question:
+Raspberry cannot establish ssh connection by wifi.
+树莓派 Raspberry 通过wifi 无法进行ssh连接
+
+Reason:
+Raspberry's ssh default setting is disable.
+Raspberry 默认ssh关闭
+
+Solution:
+turn on ssh in "Raspberry Pi Congiguration".
+在"Raspberry Pi Congiguration"中打开ssh。
+
+2017-8-24
