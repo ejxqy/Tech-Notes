@@ -1,0 +1,22 @@
+[Arduino] string.reserve() function
+[Arduino] string类型之reserve()函数的作用
+
+copy from "https://www.arduino.cc/en/Reference/StringReserve"
+Description
+
+The String reserve() function allows you to allocate a buffer in memory for manipulating strings.
+
+Syntax
+
+string.reserve(size)
+
+Parameters
+
+size: unsigned int declaring the number of bytes in memory to save for string manipulation 
+Returns
+
+none
+
+So the above tells us that string.reserve() can speed up operation such as "+="
+
+2017-8-24
