@@ -1,0 +1,16 @@
+[Arduino] Arduino's example "SerialEvent" cannot output data
+[Arduino] Arduino自带的SerialEvent示例程序 无法输出、显示
+
+Question:
+Arduino's example "SerialEvent" cannot output data
+Arduino自带的SerialEvent示例程序 无法输出、显示
+
+Reason:
+the "Serial port monitor" default setting cannot satisfy "if (inChar == '\n') {". So "stringComplete" is always false
+串口监视器的初始设置不能读入'\n'，所以不能进入"if (inChar == '\n') {"，因此"stringComplete"永远是false
+
+Solution:
+change "Serial port monitor" default setting to allowed input '\n'
+设置串口监视器为能读入'\n'
+
+2017-8-24
