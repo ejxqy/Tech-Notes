@@ -1,0 +1,33 @@
+[UBUNTU] [MOSEK] install MOSEK version 8.0.0.81 (version date：22 June 2017) in ubuntu 14.04
+[UBUNTU] [MOSEK] 在ubuntu 14.04 安装 MOSEK version 8.0.0.81 (版本日期：22 June 2017)
+
+put file "mosektoolslinux64x86.tar.bz2" in any folder. Then decompress this file using command "tar -xjvf mosektoolslinux64x86.tar.bz2"
+
+then try to run the java examples ".\mosek\8\tools\examples\java\" in eclipse
+import jars ".\mosek\8\tools\platform\linux64x86\bin\mosek.jar" will eliminate errors
+but running the program, the console shows that "lack of Mosek license file" as the follows:
+Exception in thread "main" mosek.Error: err_missing_license_file(1008)
+at mosek.Task.p_optimizetrm(Native Method)
+at mosek.Task.optimize(Unknown Source)
+at com.mosek.example.lo1.main(lo1.java:99)
+
+Solution:
+new folder "mosek" in /home/, and put mosek.lic(can get Free personal academic licens by https://license.mosek.com/academic/) in folder "mosek".
+run the program again. OK!
+(the official document says put mosek.lic in "/home/<userid>/mosek/mosek.lic")
+
+将mosektoolslinux64x86.tar.bz2放在任意文件夹，然后在该文件夹中使用命令
+tar -xjvf mosektoolslinux64x86.tar.bz2
+解压mosektoolslinux64x86.tar.bz2到当前目录
+
+接下来尝试在eclipse运行.\mosek\8\tools\examples\java\文件夹中的java example
+在eclipse中引入jar包.\mosek\8\tools\platform\linux64x86\bin\mosek.jar，然后程序就没有报错了，接下来运行程序
+运行时提示没有权限，缺少Mosek license file。如下所示：
+Exception in thread "main" mosek.Error: err_missing_license_file(1008)
+at mosek.Task.p_optimizetrm(Native Method)
+at mosek.Task.optimize(Unknown Source)
+at com.mosek.example.lo1.main(lo1.java:99)
+解决方法，在/home/新建mosek文件夹，在其中放入mosek.lic（可向官方申请Free personal academic license得到），最终得到/home/mosek/mosek.lic，再次运行程序即可成功
+（官方文档说mosek.lic放在/home/<userid>/mosek/mosek.lic，和我的方法有出入）
+
+2017-8-24
