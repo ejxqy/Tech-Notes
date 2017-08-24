@@ -1,0 +1,19 @@
+[MFC] CEdit cannot get mutil lines when input "\r\n"
+[MFC] CEdit 输入"\r\n"无法回车显示
+
+Question:
+CEdit cannot get mutil lines when input "\r\n"
+CEdit 输入"\r\n"无法回车显示
+
+Reason:
+
+
+Solution:
+two ways:
+1.when create Edit, adding "ES_MULTILINE" 
+2. set "mutiline" true in the "dialog box"
+两种方式：
+1、在代码中通过create创建Edit控件必须加入ES_MULTILINE
+2、对话框中添加的Edit控件需要将Multiline属性设置为true
+
+2017-8-24
