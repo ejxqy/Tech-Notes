@@ -1,0 +1,16 @@
+[ICMP] cannot capture icmp packet
+[ICMP] 无法获取icmp包
+
+Question:
+cannot capture icmp packet
+无法获取icmp包
+
+Reason:
+Windows firewall discards icmp packets.
+Windows系统丢弃了icmp包
+
+Solution:
+disable Windows firewall
+关闭防火墙
+
+2017-8-24
