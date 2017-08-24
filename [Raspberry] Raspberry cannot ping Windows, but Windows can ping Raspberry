@@ -1,0 +1,21 @@
+[Raspberry] Raspberry cannot ping Windows, but Windows can ping Raspberry
+[Raspberry] 树莓派Raspberry 无法ping通Windows，Windows能ping通树莓派
+
+Question:
+Raspberry cannot ping Windows, but Windows can ping Raspberry
+树莓派Raspberry 无法ping通Windows，Windows能ping通树莓派
+
+refer to http://blog.sina.com.cn/s/blog_715b47c50101knuu.html
+参考 http://blog.sina.com.cn/s/blog_715b47c50101knuu.html
+
+Reason:
+Windows firewall discards icmp packets.
+Windows系统丢弃了icmp包
+
+Solution:
+disable Windows firewall
+关闭防火墙
+
+2017-8-24
+
+
