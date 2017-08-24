@@ -1,0 +1,20 @@
+[Arduino] run program after adding some output, the Serial port monitor outputs gibberish
+[Arduino] 添加输出，运行程序时，串口显示器的输出乱码
+
+Question:
+run program after adding some output, the Serial port monitor outputs gibberish
+添加输出，运行程序时，串口显示器的输出乱码
+
+details:
+the program runs well. But sometimes the whole program output gibberish after adding just one more "Serial.println("......")"
+写程序时，有时会因为多加了一个Serial.println("......")，导致整个程序原有的正确输出变为乱码输出。
+
+Reason:
+i do not know...
+i think this is a bug.
+
+Solution:
+shorter the adding output string in "Serial.println("......")" or just delete the adding "Serial.println("......")" will make the program run well.
+此时将新增加的输出语句变短一点，或删除，程序就可正确运行。
+
+2017-8-24
