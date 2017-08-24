@@ -1,0 +1,16 @@
+[Raspberry]get "blank screen" after installing input method and restart Raspberry, and cannot use GUI
+[Raspberry]树莓派Raspberry安装输入法后重启黑屏，无法进入图形界面
+
+Question:
+get "blank screen" after installing input method and restart Raspberry, and cannot use GUI
+树莓派Raspberry安装输入法后重启黑屏，无法进入图形界面
+
+Reason:
+Filesystem does not use the whole sd card. After installing input method, there is no room for loading the system.
+烧录树莓派系统的话就会压缩空间，仅仅会使用sd卡的一部分空间。所以安装完输入法后，剩余的空间就不足以加载系统了。
+
+Solution:
+in the terminal use command "sudo raspi-config" and then choose "Expand Filesystem" to let Filesystem uses the whole sd card.
+在terminal使用命令把Filesystem拓展到整个sd卡。"sudo raspi-config" --> Expand Filesystem"
+
+2017-8-24
