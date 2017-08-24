@@ -1,0 +1,16 @@
+[C++] C++ error C2679: binary '<<' : no operator found which takes a right-hand operand of type 'std::string' (or there is no acceptable conversion)
+[C++] C++ error C2679: 二进制“<<”: 没有找到接受“std::string”类型的右操作数的运算符(或没有可接受的转换)
+
+Question:
+C++ error C2679: binary '<<' : no operator found which takes a right-hand operand of type 'std::string' (or there is no acceptable conversion)
+C++ error C2679: 二进制“<<”: 没有找到接受“std::string”类型的右操作数的运算符(或没有可接受的转换)
+
+Reason:
+String.h is old version
+String.h 是老版本的
+
+Solution:
+change #include "String.h" into #include<string>
+把 #include "String.h" 改成 #include<string>
+
+2017-8-24
