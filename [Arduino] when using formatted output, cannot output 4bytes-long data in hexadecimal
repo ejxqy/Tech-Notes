@@ -1,0 +1,32 @@
+[Arduino] when using formatted output, cannot output 4bytes-long data in hexadecimal
+[Arduino] 格式化输出时 无法以16进制输出4byte长的数据
+
+Question:
+when formatted output, cannot output 4 bytes-long data in hexadecimal
+格式化输出时 无法以16进制输出4byte长的数据
+
+detail:
+printf("%08x ", (byte_4)a); //PS: byte_4 is 4 byte-long data by user-defined
+//PPS: printf is user-defined, refer to http://playground.arduino.cc/Main/Printf
+but the output show that the higt 2byte always is 0x0000
+
+printf("%08x ", (byte_4)a); //注: byte_4是自定义的4byte长的数据
+//注: printf需要自己定义,定义方法参见http://playground.arduino.cc/Main/Printf
+但是高2byte一直显示0x0000
+
+Reason:
+i do not know...
+
+Solution:
+divide the 4-bytes-long data into 2 2-bytes-long data. Then output these 2 2-bytes-long data
+printf("%04x%04x ", (byte_2)(a>>16), (byte_2)(a));
+//PS: byte_2 is 2 byte-long data by user-defined
+now we can run the program and see the right output
+
+将4byte长的数据分为2个2byte长的数据，然后再输出
+printf("%04x%04x ", (byte_2)(a>>16), (byte_2)(a));
+//注: byte_2是自定义的2byte长的数据
+现在运行程序，可以见到完整的数据输出了
+
+2017-8-24
+
