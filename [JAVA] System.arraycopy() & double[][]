@@ -1,0 +1,20 @@
+[JAVA] System.arraycopy() & double[][]
+
+when i use System.arraycopy() to copy a double[][], System.arraycopy() copies the address to the dest double[][] not thevalue
+
+double[][] yOld;
+double[][] yNew
+init yOld & yNew
+System.arraycopy(yNew, 0, yOld, 0, yOld.length);
+
+after System.arraycopy(), if i change the value of yNew[0][0] = 1
+yOld[0][0 will be 1, too
+
+i donot know why
+to solve it
+
+			for ( int j = 0; j < bsNum; j++ ) {
+				for ( int c = 0; c < contentNum; c++ ) {
+					yOld[j][c] = yNew[j][c];
+				}
+			}
